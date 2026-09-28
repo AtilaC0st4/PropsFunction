@@ -3,10 +3,17 @@ import { StyleSheet, Text, View } from 'react-native';
 import Filho from './components/Filho';
 
 export default function App() {
+
+  const mostrarMensagem = (nome) => {
+    alert(`OLÁ!!, ${nome}`)
+  }
+
   return (
     <View style={styles.container}>
       <Text>Pai</Text>
-     <Filho/>
+
+      <Filho onMostrarMensagem={mostrarMensagem}  />
+     
     </View>
   );
 }
